@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0; /* Latar belakang halaman browser */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Kontainer Utama */
+.container {
+    background-color: #e6e4df; /* Warna krem/abu terang untuk area teks */
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- WADAH FOTO --- */
+.image-container {
+    width: 100%;
+    height: 300px; /* Tinggi area foto */
+    overflow: hidden; /* Memastikan foto tidak keluar dari kotak */
+    background-color: #a5a5a5; /* Warna abu-abu jika foto belum dimuat */
+}
+
+/* Memastikan foto mengisi kotak dengan rapi */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Foto akan dipotong rapi agar pas di kotak */
+    object-position: center;
+    display: block;
+}
+
+/* --- AREA KONTEN --- */
+.content {
+    padding: 30px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Judul Berita & Garis Pertama */
+.headline-wrapper {
+    width: 95%; /* Lebar area judul & garis */
+    display: flex;
+    align-items: flex-end; /* Menyejajarkan teks dan garis di bawah */
+    margin-bottom: 45px; /* Jarak ke garis kedua */
+}
+
+.headline {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+    margin-right: 10px; /* Jarak antara teks judul dan garis */
+}
+
+/* Garis Pertama (di samping judul) */
+.headline-wrapper .line {
+    flex-grow: 1; /* Garis memanjang mengisi sisa ruang */
+    margin-bottom: 6px; /* Menyesuaikan tinggi garis agar sejajar teks */
+}
+
+/* Garis Biasa (Paragraf) */
+.line {
+    width: 95%;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 45px; /* Jarak antar garis */
+}
+
+/* Tombol Kembali */
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn-back {
+    background-color: #b3b3b3; /* Warna abu-abu tombol */
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 30px; /* Membuat ujung tombol membulat */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #999999;
+}
+
+/* --- RESPONSIF UNTUK LAYAR HP --- */
+@media (max-width: 768px) {
+    .image-container {
+        height: 200px; /* Foto lebih pendek di HP */
+    }
+    .headline {
+        font-size: 22px; /* Teks judul lebih kecil di HP */
+    }
+    .line {
+        margin-bottom: 30px;
+    }
+    .btn-back {
+        font-size: 18px;
+        padding: 10px 35px;
+    }
+}

@@ -1,0 +1,194 @@
+/* Reset dasar biar rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #dcdcdc; /* Background abu-abu muda sesuai gambar */
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Biar kontennya di tengah layar */
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex; /* Flexbox! */
+    justify-content: space-between; /* Logo kiri, Nav kanan */
+    align-items: center; /* Rata tengah vertikal */
+    margin-bottom: 30px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.sekolah-text h2 {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.1;
+    color: #000;
+}
+
+/* Navigasi Menu */
+.navbar {
+    display: flex; /* Flexbox! */
+    gap: 20px; /* Jarak antar tombol menu */
+}
+
+.navbar a {
+    background-color: #f8f3f3; /* Abu-abu tombol */
+    color: black;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #f9f3f3;
+}
+
+/* ================= JUDUL UTAMA ================= */
+.judul-utama {
+    background-color: #f5f2f2; /* Abu-abu tua */
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    display: flex; /* Flexbox! */
+    justify-content: space-between; /* Teks kiri, kotak hitam kanan */
+    align-items: center;
+    border: 1px solid #fbf9f9;
+}
+
+.judul-utama h1 {
+    color: rgb(8, 5, 5);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Kotak Hitam di Kanan Judul */
+.kotak-hitam-kanan {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(252, 247, 247);
+    border-radius: 15px; /* Biar agak bulat sesuai gambar */
+}
+
+/* ================= KONTEN WRAPPER ================= */
+.konten-wrapper {
+    display: flex; /* Flexbox! Membagi kiri (berita) dan kanan (sidebar) */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* --- KIRI: GRID BERITA --- */
+.grid-berita {
+    display: flex; /* Flexbox! */
+    flex-wrap: wrap; /* Biar bisa turun ke baris baru */
+    gap: 20px;
+    flex: 3; /* Porsi lebih besar */
+}
+
+.kartu-berita {
+    background-color: #fbf9f9;
+    padding: 15px;
+    width: calc(33.33% - 20px); /* Bagi 3 kolom sejajar */
+    border: 1px solid #f4f2f2;
+}
+
+.kartu-header {
+    display: flex; /* Flexbox! Ikon dan Judul sejajar */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-kecil {
+    width: 30px;
+    height: auto;
+}
+
+.kartu-berita h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.kartu-berita p {
+    font-size: 14px;
+    margin-left: 40px; /* Biar sejajar sama teks judul */
+}
+
+/* Kotak Tombol Plus */
+.kartu-plus {
+    background-color: hwb(0 98% 2%);
+    width: calc(33.33% - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    border: 1px solid #fffcfc;
+    cursor: pointer;
+    min-height: 100px;
+}
+
+/* --- KANAN: SIDEBAR ACARA --- */
+.sidebar-acara {
+    flex: 1.2; /* Porsi lebih kecil */
+    background-color: #a0a0a0;
+    padding: 20px;
+    border: 1px solid #777;
+}
+
+.sidebar-acara h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+.list-acara {
+    display: flex;
+    flex-direction: column; /* Flexbox! Tersusun ke bawah */
+    gap: 15px;
+}
+
+.item-acara {
+    background-color: #555; /* Abu-abu gelap */
+    color: white;
+    padding: 15px;
+}
+
+.item-acara h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.item-acara p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Kiri dan kanan */
+    padding: 10px 0;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+} 
+
+.bac{
+    background-color: #777;
+    padding: 15px;
+    width: calc(33.33% - 20px); /* Bagi 3 kolom sejajar */
+    border: 1px solid #777;
+
+}
